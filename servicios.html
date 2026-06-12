@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios y productos - Plutón Games</title>
+    <meta name="description" content="Catálogo de juegos de mesa, TCG, cómics y eventos organizados por Plutón Games.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/pluton_games_icon.png" alt="Logo" height="28" class="me-2 align-text-bottom">Plutón <span>Games</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="servicios.html">Servicios y productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <div class="lang-switch">
+                    <a href="servicios.html" class="active">ES</a>
+                    <span class="text-muted">|</span>
+                    <a href="en_services.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header animate-on-scroll">
+        <div class="container">
+            <h1 class="hero-title mb-3">Nuestra<span> oferta</span></h1>
+            <p class="lead text-muted">Descubre todo lo que ofrecemos: desde los mejores juegos y novedades hasta eventos comunitarios donde poner a prueba tus habilidades.</p>
+        </div>
+    </header>
+
+    <!-- Catálogo Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2 class="section-title">Nuestros tesoros</h2>
+            </div>
+
+            <!-- Juegos de Mesa -->
+            <div class="row align-items-stretch mb-5 category-row animate-on-scroll delay-100">
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="h3 mb-3 fw-bold">Juegos de mesa</h3>
+                    <p class="text-muted text-justify mb-4">Sumérgete en nuestra amplia ludoteca. Desde los Eurogames más galardonados y desafiantes, hasta divertidos party games para amenizar cualquier fiesta. Contamos con expertos que te asesorarán según tus gustos, el número de jugadores y tu nivel de experiencia. Si no lo tenemos, ¡te lo conseguimos!</p>
+                    <div class="d-flex align-items-center mb-4 p-3 bg-light rounded-4 border" style="width: fit-content;">
+                        <i class="bi bi-tag-fill text-primary fs-3 me-3"></i>
+                        <div>
+                            <span class="d-block text-muted small fw-bold text-uppercase" style="letter-spacing: 0.5px;">Desde</span>
+                            <span class="d-block fs-4 fw-bold" style="color: var(--accent-color); line-height: 1;">14,95 €</span>
+                        </div>
+                    </div>
+                    <div><a href="tienda.html" class="btn btn-custom">Ver en la tienda</a></div>
+                </div>
+                <div class="col-md-6 p-0">
+                    <div class="category-img-wrapper img-fade-left">
+                        <img src="assets/board_game_category.png" alt="Juegos de mesa en exhibición">
+                    </div>
+                </div>
+            </div>
+
+            <!-- TCG -->
+            <div class="row align-items-stretch mb-5 flex-row-reverse category-row animate-on-scroll delay-200">
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="h3 mb-3 fw-bold">Cartas coleccionables</h3>
+                    <p class="text-muted text-justify mb-4">El paraíso para los constructores de mazos. Ponemos a tu disposición todo tipo de producto sellado, además de un amplio mercado de cartas sueltas para completar tu estrategia. También encontrarás el mejor surtido de accesorios: fundas protectoras, cajas (deckboxes), tapetes premium y dados.</p>
+                    <div class="d-flex align-items-center mb-4 p-3 bg-light rounded-4 border" style="width: fit-content;">
+                        <i class="bi bi-tag-fill text-primary fs-3 me-3"></i>
+                        <div>
+                            <span class="d-block text-muted small fw-bold text-uppercase" style="letter-spacing: 0.5px;">Sobres desde</span>
+                            <span class="d-block fs-4 fw-bold" style="color: var(--accent-color); line-height: 1;">4,50 €</span>
+                        </div>
+                    </div>
+                    <div><a href="tienda.html" class="btn btn-custom">Ver en la tienda</a></div>
+                </div>
+                <div class="col-md-6 p-0">
+                    <div class="category-img-wrapper img-fade-right">
+                        <img src="assets/tcg_category.png" alt="Cartas coleccionables y sobres">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comics y Manga -->
+            <div class="row align-items-stretch mb-5 category-row animate-on-scroll delay-300">
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="h3 mb-3 fw-bold">Cómics y manga</h3>
+                    <p class="text-muted text-justify mb-4">Vive miles de aventuras a través de las viñetas. Recibimos remesas de novedades semanalmente y gestionamos suscripciones para que nunca te pierdas el último tomo de tu serie favorita. Además, contamos con una gran biblioteca de novela fantástica, ciencia ficción y manuales de rol.</p>
+                    <div class="d-flex align-items-center mb-4 p-3 bg-light rounded-4 border" style="width: fit-content;">
+                        <i class="bi bi-tag-fill text-primary fs-3 me-3"></i>
+                        <div>
+                            <span class="d-block text-muted small fw-bold text-uppercase" style="letter-spacing: 0.5px;">Tomos desde</span>
+                            <span class="d-block fs-4 fw-bold" style="color: var(--accent-color); line-height: 1;">8,50 €</span>
+                        </div>
+                    </div>
+                    <div><a href="tienda.html" class="btn btn-custom">Descubrir catálogo</a></div>
+                </div>
+                <div class="col-md-6 p-0">
+                    <div class="category-img-wrapper img-fade-left">
+                        <img src="assets/comic_category.png" alt="Manga y Cómics">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Miniaturas -->
+            <div class="row align-items-stretch mb-5 category-row flex-row-reverse animate-on-scroll delay-400">
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="h3 mb-3 fw-bold">Miniaturas</h3>
+                    <p class="text-muted text-justify mb-4">Construye, pinta y lidera tus ejércitos hacia la victoria. Tenemos una vasta selección de cajas de miniaturas, imprimaciones, una gama completa de pinturas acrílicas, pinceles de todos los tamaños y texturas para peanas. Da el primer paso en el mundo del modelismo de wargames.</p>
+                    <div class="d-flex align-items-center mb-4 p-3 bg-light rounded-4 border" style="width: fit-content;">
+                        <i class="bi bi-tag-fill text-primary fs-3 me-3"></i>
+                        <div>
+                            <span class="d-block text-muted small fw-bold text-uppercase" style="letter-spacing: 0.5px;">Cajas desde</span>
+                            <span class="d-block fs-4 fw-bold" style="color: var(--accent-color); line-height: 1;">29,90 €</span>
+                        </div>
+                    </div>
+                    <div><a href="tienda.html" class="btn btn-custom">Explorar miniaturas</a></div>
+                </div>
+                <div class="col-md-6 p-0">
+                    <div class="category-img-wrapper img-fade-right">
+                        <img src="assets/warhammer_boxes.png" alt="Cajas de Miniaturas Warhammer">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eventos y Torneos -->
+            <div class="row align-items-stretch mb-5 category-row animate-on-scroll delay-500">
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="h3 mb-3 fw-bold">Eventos y torneos</h3>
+                    <p class="text-muted text-justify mb-4">El corazón de nuestra comunidad. Participa en presentaciones exclusivas (Prereleases), ligas competitivas y torneos semanales sancionados oficialmente de juegos como Magic y Pokémon. ¡Premios garantizados, sorteos y un ambiente inmejorable para medir tu habilidad y hacer amigos!</p>
+                    <div><a href="#calendario" class="btn btn-custom">Ver calendario</a></div>
+                </div>
+                <div class="col-md-6 p-0">
+                    <div class="category-img-wrapper img-fade-left">
+                        <img src="assets/tournament_event_new.png" alt="Torneos" style="object-position: center bottom;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talleres -->
+            <div class="row align-items-stretch mb-5 category-row flex-row-reverse animate-on-scroll delay-600">
+                <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                    <h3 class="h3 mb-3 fw-bold">Talleres</h3>
+                    <p class="text-muted text-justify mb-4">¿Quieres aprender a jugar o a pintar? Regularmente ofrecemos jornadas de iniciación gratuitas, sesiones de prueba de juegos de mesa y clases maestras de pintura de miniaturas. Te proporcionamos los materiales, tú solo pones las ganas de aprender.</p>
+                    <div><a href="#calendario" class="btn btn-custom">Ver calendario</a></div>
+                </div>
+                <div class="col-md-6 p-0">
+                    <div class="category-img-wrapper img-fade-right">
+                        <img src="assets/taller_miniaturas_new.png" alt="Talleres" style="object-position: center top;">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Calendario de eventos -->
+    <section class="py-5 bg-light" id="calendario">
+        <div class="container py-5 animate-on-scroll">
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-4">Calendario de eventos</h2>
+                <p class="lead text-muted">Explora nuestras actividades. Haz clic en los días con eventos para ver más detalles y apuntarte.</p>
+            </div>
+            
+            <div class="table-responsive shadow-sm bg-white rounded-4 p-3">
+                <h3 class="text-center mb-3 mt-2 text-dark fw-bold">Junio 2026</h3>
+                <table class="table table-bordered text-center align-middle" style="min-width: 800px; table-layout: fixed;">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="py-3" style="width: 14.28%">Lunes</th>
+                            <th class="py-3" style="width: 14.28%">Martes</th>
+                            <th class="py-3" style="width: 14.28%">Miércoles</th>
+                            <th class="py-3" style="width: 14.28%">Jueves</th>
+                            <th class="py-3" style="width: 14.28%">Viernes</th>
+                            <th class="py-3" style="width: 14.28%">Sábado</th>
+                            <th class="py-3" style="width: 14.28%">Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Week 1: 1-7 -->
+                        <tr>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalYugioh" style="height: 120px;">
+                                <div class="fw-bold mb-2">1</div>
+                                <span class="badge bg-secondary d-block mb-1 text-wrap">Torneo Yu-Gi-Oh!</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalLorcana">
+                                <div class="fw-bold mb-2">2</div>
+                                <span class="badge d-block mb-1 text-wrap" style="background-color: #6f42c1;">Lorcana Casual</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalMesa">
+                                <div class="fw-bold mb-2">3</div>
+                                <span class="badge bg-info d-block mb-1 text-wrap">Tardes de mesa</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalWarhammer">
+                                <div class="fw-bold mb-2">4</div>
+                                <span class="badge bg-danger d-block mb-1 text-wrap">Liga Warhammer</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalMagic">
+                                <div class="fw-bold mb-2">5</div>
+                                <span class="badge bg-primary d-block mb-1 text-wrap">Friday Night Magic</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalPioneer">
+                                <div class="fw-bold mb-2">6</div>
+                                <span class="badge bg-primary d-block mb-1 text-wrap">MTG Pioneer</span>
+                            </td>
+                            <td class="p-3 bg-light">
+                                <div class="fw-bold mb-2 text-danger">7</div>
+                            </td>
+                        </tr>
+                        <!-- Week 2: 8-14 -->
+                        <tr>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalYugioh" style="height: 120px;">
+                                <div class="fw-bold mb-2">8</div>
+                                <span class="badge bg-secondary d-block mb-1 text-wrap">Torneo Yu-Gi-Oh!</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalLorcana">
+                                <div class="fw-bold mb-2">9</div>
+                                <span class="badge d-block mb-1 text-wrap" style="background-color: #6f42c1;">Lorcana Casual</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalMesa">
+                                <div class="fw-bold mb-2">10</div>
+                                <span class="badge bg-info d-block mb-1 text-wrap">Tardes de mesa</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalWarhammer">
+                                <div class="fw-bold mb-2">11</div>
+                                <span class="badge bg-danger d-block mb-1 text-wrap">Liga Warhammer</span>
+                            </td>
+                            <td class="p-3 calendar-cell border-warning border-3" style="background-color: #fffbeb;" role="button" data-bs-toggle="modal" data-bs-target="#modalMagic">
+                                <div class="fw-bold mb-2 text-warning">12 <small>(Hoy)</small></div>
+                                <span class="badge bg-primary d-block mb-1 text-wrap">Friday Night Magic</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalPintura">
+                                <div class="fw-bold mb-2">13</div>
+                                <span class="badge bg-warning text-dark d-block mb-1 text-wrap">Taller pintura miniaturas</span>
+                            </td>
+                            <td class="p-3 calendar-cell bg-light border-danger border-2" role="button" data-bs-toggle="modal" data-bs-target="#modalDnD">
+                                <div class="fw-bold mb-2 text-danger">14</div>
+                                <span class="badge bg-danger d-block mb-1 text-wrap">Iniciación D&D</span>
+                            </td>
+                        </tr>
+                        <!-- Week 3: 15-21 -->
+                        <tr>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalYugioh" style="height: 120px;">
+                                <div class="fw-bold mb-2">15</div>
+                                <span class="badge bg-secondary d-block mb-1 text-wrap">Torneo Yu-Gi-Oh!</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalLorcana">
+                                <div class="fw-bold mb-2">16</div>
+                                <span class="badge d-block mb-1 text-wrap" style="background-color: #6f42c1;">Lorcana Casual</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalMesa">
+                                <div class="fw-bold mb-2">17</div>
+                                <span class="badge bg-info d-block mb-1 text-wrap">Tardes de mesa</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalDoble">
+                                <div class="fw-bold mb-2">18</div>
+                                <span class="badge bg-danger d-block mb-1 text-wrap">Liga Warhammer</span>
+                                <span class="badge bg-success d-block mt-1 text-wrap">Presentación Cómic</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalMagic">
+                                <div class="fw-bold mb-2">19</div>
+                                <span class="badge bg-primary d-block mb-1 text-wrap">Friday Night Magic</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalTorneo">
+                                <div class="fw-bold mb-2">20</div>
+                                <span class="badge bg-dark d-block mb-1 text-wrap">Store Championship Pokémon</span>
+                            </td>
+                            <td class="p-3 bg-light">
+                                <div class="fw-bold mb-2 text-danger">21</div>
+                            </td>
+                        </tr>
+                        <!-- Week 4: 22-28 -->
+                        <tr>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalYugioh" style="height: 120px;">
+                                <div class="fw-bold mb-2">22</div>
+                                <span class="badge bg-secondary d-block mb-1 text-wrap">Torneo Yu-Gi-Oh!</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalLorcana">
+                                <div class="fw-bold mb-2">23</div>
+                                <span class="badge d-block mb-1 text-wrap" style="background-color: #6f42c1;">Lorcana Casual</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalMesa">
+                                <div class="fw-bold mb-2">24</div>
+                                <span class="badge bg-info d-block mb-1 text-wrap">Tardes de mesa</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalWarhammer">
+                                <div class="fw-bold mb-2">25</div>
+                                <span class="badge bg-danger d-block mb-1 text-wrap">Liga Warhammer</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalMagic">
+                                <div class="fw-bold mb-2">26</div>
+                                <span class="badge bg-primary d-block mb-1 text-wrap">Friday Night Magic</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalPrerelease">
+                                <div class="fw-bold mb-2">27</div>
+                                <span class="badge bg-primary d-block mb-1 text-wrap">Prerelease Nueva Colección Magic</span>
+                            </td>
+                            <td class="p-3 calendar-cell bg-light border-success border-2" role="button" data-bs-toggle="modal" data-bs-target="#modalFamilia">
+                                <div class="fw-bold mb-2 text-danger">28</div>
+                                <span class="badge bg-success d-block mb-1 text-wrap">Domingo Familiar</span>
+                            </td>
+                        </tr>
+                        <!-- Week 5: 29-30 -->
+                        <tr>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalYugioh" style="height: 120px;">
+                                <div class="fw-bold mb-2">29</div>
+                                <span class="badge bg-secondary d-block mb-1 text-wrap">Torneo Yu-Gi-Oh!</span>
+                            </td>
+                            <td class="p-3 calendar-cell" role="button" data-bs-toggle="modal" data-bs-target="#modalLorcana">
+                                <div class="fw-bold mb-2">30</div>
+                                <span class="badge d-block mb-1 text-wrap" style="background-color: #6f42c1;">Lorcana Casual</span>
+                            </td>
+                            <td class="p-3 text-muted bg-light">1</td>
+                            <td class="p-3 text-muted bg-light">2</td>
+                            <td class="p-3 text-muted bg-light">3</td>
+                            <td class="p-3 text-muted bg-light">4</td>
+                            <td class="p-3 text-muted bg-light">5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales para Eventos -->
+    <!-- Modal Juegos de Mesa -->
+    <div class="modal fade" id="modalMesa" tabindex="-1" aria-labelledby="modalMesaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white border-0">
+                    <h5 class="modal-title" id="modalMesaLabel"><i class="bi bi-dice-5-fill me-2"></i>Tardes de juegos de mesa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-primary fw-bold mb-3"><i class="bi bi-clock me-2"></i>Miércoles de 17:00 a 20:30</p>
+                    <p>Únete a nosotros para probar novedades frescas de la ludoteca, como las últimas expansiones de 'Catán', la locura de 'Exploding Kittens' o juegos de gestión de recursos como 'Terraforming Mars'.</p>
+                    <p>Si no tienes con quién jugar, este es el lugar perfecto para buscar grupo. Contamos con un experto en tienda para explicar las reglas de los juegos abiertos para que no tengas que leer manuales. ¡Ven a pasar la tarde!</p>
+                    <div class="alert alert-warning py-2 mb-0 mt-4" role="alert">
+                        <small><i class="bi bi-info-circle me-1"></i>Aforo máximo: 20 personas. Se recomienda reservar.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Inscribirse (Gratis)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Liga Warhammer -->
+    <div class="modal fade" id="modalWarhammer" tabindex="-1" aria-labelledby="modalWarhammerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white border-0">
+                    <h5 class="modal-title" id="modalWarhammerLabel"><i class="bi bi-shield-fill me-2"></i>Liga Warhammer 40k</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-danger fw-bold mb-3"><i class="bi bi-clock me-2"></i>Jueves de 16:30 a 21:00</p>
+                    <p>Continúa la encarnizada liga local de Warhammer 40k de esta temporada. Trae tu ejército confeccionado de 1000 puntos y demuestra tus dotes como estratega en nuestras mesas con escenografía profesional preparada, recreando planetas devastados por la guerra.</p>
+                    <p>Si eres nuevo, ¡puedes venir de espectador o apuntarte a una partida amistosa de aprendizaje en la mesa contigua con ejércitos prestados por la tienda!</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Ver Clasificación</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Friday Night Magic -->
+    <div class="modal fade" id="modalMagic" tabindex="-1" aria-labelledby="modalMagicLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title" id="modalMagicLabel"><i class="bi bi-stars me-2"></i>Friday Night Magic (Modern)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-primary fw-bold mb-3"><i class="bi bi-clock me-2"></i>Viernes a las 17:00</p>
+                    <p>El clásico torneo que da comienzo al fin de semana. Este mes el formato elegido por la comunidad es <strong>Modern</strong>. Juega rondas suizas al mejor de tres y compite por la gloria local.</p>
+                    <p>Sorteamos sobres promocionales (Promo Packs) de la última colección entre todos los participantes independientemente del resultado, y entregamos crédito de tienda a los jugadores del top 4. ¡Afila tu mazo y únete a la comunidad de MTG más grande de la zona!</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Inscribirse (5€)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Taller Pintura -->
+    <div class="modal fade" id="modalPintura" tabindex="-1" aria-labelledby="modalPinturaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-dark border-0">
+                    <h5 class="modal-title" id="modalPinturaLabel"><i class="bi bi-palette-fill me-2"></i>Masterclass: Pintado de Miniaturas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-warning-emphasis fw-bold mb-3"><i class="bi bi-clock me-2"></i>Sábado 13 de junio, 11:00 a 14:00</p>
+                    <p>Aprende técnicas avanzadas de pincel seco, aguadas (washes), iluminación de filos (edge highlighting) y creación de peanas realistas con nuestro pintor profesional invitado, especializado en ejércitos de competición.</p>
+                    <p>El precio del taller incluye todo el material que necesitas usar durante la clase (pinceles finos, paletas húmedas, set completo de pinturas Citadel) y una miniatura básica (Space Marine o Stormcast Eternal) para practicar y llevártela a casa terminada.</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Reservar Plaza (15€)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Doble Evento (18) -->
+    <div class="modal fade" id="modalDoble" tabindex="-1" aria-labelledby="modalDobleLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white border-0">
+                    <h5 class="modal-title" id="modalDobleLabel"><i class="bi bi-calendar-event me-2"></i>Eventos del Jueves 18</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <h6 class="text-danger fw-bold border-bottom pb-2"><i class="bi bi-shield-fill me-2"></i>Liga Warhammer 40k</h6>
+                    <p class="text-muted"><i class="bi bi-clock me-1"></i>De 16:30 a 21:00</p>
+                    <p>Partidas de la liga regular a 1000 puntos. La clasificación está apretadísima y esta semana se deciden los cruces de playoffs.</p>
+                    
+                    <h6 class="text-success fw-bold border-bottom pb-2 mt-4"><i class="bi bi-book-half me-2"></i>Presentación de Cómic Independiente</h6>
+                    <p class="text-muted"><i class="bi bi-clock me-1"></i>A las 18:00</p>
+                    <p>Charla íntima y sesión de firmas con el autor del aclamado cómic de fantasía oscura "Héroes del Cartón". Descubre su proceso creativo de primera mano, desde el boceto hasta la viñeta final, y llévate una lámina exclusiva con tu copia firmada.</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Torneo Store Championship -->
+    <div class="modal fade" id="modalTorneo" tabindex="-1" aria-labelledby="modalTorneoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white border-0">
+                    <h5 class="modal-title" id="modalTorneoLabel"><i class="bi bi-trophy-fill text-warning me-2"></i>Store Championship Pokémon</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-dark fw-bold mb-3"><i class="bi bi-clock me-2"></i>Sábado 20 de junio, Inicio a las 10:30</p>
+                    <p>¡El evento competitivo más importante de la temporada a nivel de tienda! Demuestra que eres el mejor entrenador de Vigo en nuestro Store Championship oficial. Formato Estándar, rondas suizas al mejor de tres con corte al Top 8.</p>
+                    <p>El campeón absoluto se llevará un tapete de juego exclusivo de "Campeón de la Tienda" que no se puede conseguir de otra forma y una caja completa de sobres (booster box) de la última expansión. Además, entregaremos cartas promo conmemorativas estampadas a todos los asistentes y sortearemos merchandising oficial entre rondas.</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Comprar Entrada (12€)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Prerelease -->
+    <div class="modal fade" id="modalPrerelease" tabindex="-1" aria-labelledby="modalPrereleaseLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title" id="modalPrereleaseLabel"><i class="bi bi-box-seam-fill me-2"></i>Presentación Nueva Colección Magic</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-primary fw-bold mb-3"><i class="bi bi-clock me-2"></i>Sábado 27 de junio, Inicio a las 16:30</p>
+                    <p>¡Vuelve el evento favorito de la comunidad! El formato de presentación (Sealed) donde abres cartas por primera vez. Sé uno de los primeros en experimentar la magia de la nueva colección antes de su lanzamiento global en tiendas.</p>
+                    <p>Te entregaremos un kit de presentación cerrado con 6 sobres y una carta promocional holográfica exclusiva estampada con la fecha. Tendrás 45 minutos para construir un mazo de 40 cartas y participarás en un torneo casual y amigable, sin la presión del meta competitivo. Ideal para veteranos y nuevos jugadores por igual. ¡Habrá ronda de pizzas a mitad del torneo incluida con la entrada!</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Pre-comprar Kit (30€)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Yugioh -->
+    <div class="modal fade" id="modalYugioh" tabindex="-1" aria-labelledby="modalYugiohLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white border-0">
+                    <h5 class="modal-title" id="modalYugiohLabel"><i class="bi bi-heptagon-fill me-2"></i>Torneo Yu-Gi-Oh! Avanzado</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-secondary fw-bold mb-3"><i class="bi bi-clock me-2"></i>Lunes a las 17:30</p>
+                    <p>Es la hora del duelo. Empieza la semana con nuestro torneo oficial de Yu-Gi-Oh! TCG en formato Avanzado. Demuestra la valía de tu baraja contra los duelistas más feroces de Vigo.</p>
+                    <p>Se entregará un sobre OTS a cada jugador por participar, y repartiremos material exclusivo como tapetes o Field Centers dependiendo de la asistencia final al torneo.</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Inscribirse (5€)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Lorcana -->
+    <div class="modal fade" id="modalLorcana" tabindex="-1" aria-labelledby="modalLorcanaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-white border-0" style="background-color: #6f42c1;">
+                    <h5 class="modal-title" id="modalLorcanaLabel"><i class="bi bi-stars me-2"></i>Torneo Lorcana Casual</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-purple fw-bold mb-3" style="color: #6f42c1;"><i class="bi bi-clock me-2"></i>Martes a las 17:00</p>
+                    <p>Adéntrate en el mágico mundo de Disney Lorcana TCG. Un evento amigable orientado tanto a nuevos jugadores (Illumineers) como a veteranos. Formato construido casual.</p>
+                    <p>Acumula puntos para la liga bimensual solo por jugar y gana cartas promocionales foil y pines exclusivos de personajes Disney al final de temporada.</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Inscribirse (6€)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pioneer -->
+    <div class="modal fade" id="modalPioneer" tabindex="-1" aria-labelledby="modalPioneerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title" id="modalPioneerLabel"><i class="bi bi-fire me-2"></i>Torneo MTG Pioneer</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-primary fw-bold mb-3"><i class="bi bi-clock me-2"></i>Sábado 6 de junio a las 10:30</p>
+                    <p>Saca tu mazo de Pioneer a pasear en nuestro torneo especial de fin de semana. Un formato más accesible que Modern y perfecto para competir a gran nivel.</p>
+                    <p>Premios generosos en saldo de tienda para los ganadores en función de la recaudación total de las entradas. ¡Ven a por tu plaza!</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Inscribirse (10€)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal DnD -->
+    <div class="modal fade" id="modalDnD" tabindex="-1" aria-labelledby="modalDnDLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white border-0">
+                    <h5 class="modal-title" id="modalDnDLabel"><i class="bi bi-dice-6-fill me-2"></i>Taller de Iniciación a D&D</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-danger fw-bold mb-3"><i class="bi bi-clock me-2"></i>Domingo 14 de junio, 10:30 a 14:00</p>
+                    <p>¿Siempre has querido jugar a rol pero no sabías por dónde empezar? Ven a nuestra mesa para una partida rápida (One-shot) diseñada para absolutos principiantes en la 5ta Edición de Dungeons & Dragons.</p>
+                    <p>Nuestro Dungeon Master proporcionará personajes pre-generados, dados y hojas de ayuda. Solo necesitas traer tu imaginación. Plazas extremadamente limitadas (solo 5 aventureros).</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Reservar Plaza (Gratis)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Familia -->
+    <div class="modal fade" id="modalFamilia" tabindex="-1" aria-labelledby="modalFamiliaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white border-0">
+                    <h5 class="modal-title" id="modalFamiliaLabel"><i class="bi bi-emoji-smile me-2"></i>Domingo Familiar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start p-4">
+                    <p class="text-success fw-bold mb-3"><i class="bi bi-clock me-2"></i>Domingo 28 de junio, 10:30 a 14:00</p>
+                    <p>Una mañana dedicada a los más pequeños de la casa y sus familias. Abriremos docenas de juegos de mesa infantiles y party games ligeros (como Fantasma Blitz, Dobble, y Aventureros al Tren Primer Viaje).</p>
+                    <p>Nuestros "duendes" de la tienda estarán disponibles para ayudaros a elegir el juego perfecto y explicaros cómo se juega para que podáis poneros a reír y jugar de inmediato.</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-custom">Me apunto (Gratis)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promociones -->
+    <section class="py-5 border-top border-warning">
+        <div class="container py-5 text-center animate-on-scroll">
+            <h2 class="section-title mb-5">Promociones activas</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="table-responsive">
+                        <table class="table table-custom table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="py-3">Tipo de promoción</th>
+                                    <th scope="col" class="py-3">Descripción</th>
+                                    <th scope="col" class="py-3">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-start">
+                                <tr>
+                                    <td class="fw-bold"><i class="bi bi-calendar-event me-2 text-danger"></i>Reserva
+                                        anticipada</td>
+                                    <td>Consigue un 10% de descuento directo y material promocional al reservar
+                                        lanzamientos gordos.</td>
+                                    <td><span class="badge bg-success px-3 py-2">Activa</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold"><i class="bi bi-card-checklist me-2 text-primary"></i>Tarjeta
+                                        fidelidad</td>
+                                    <td>Acumula sellos con cada compra superior a 15€ y canjéalos por vales de descuento
+                                        o pases de torneo.</td>
+                                    <td><span class="badge bg-success px-3 py-2">Activa</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold"><i class="bi bi-stars me-2 text-primary"></i>Días del juego
+                                        (Vigo)</td>
+                                    <td>Descuentos especiales, sorteos de cajas y partidas maratonianas durante las
+                                        fiestas locales.</td>
+                                    <td><span class="badge bg-secondary px-3 py-2">Próximamente</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-auto">
+        <div class="container animate-on-scroll">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <a class="navbar-brand d-block mb-3" href="index.html">
+                        <img src="assets/pluton_games_icon.png" alt="Logo" height="28" class="me-2 align-text-bottom">Plutón <span>Games</span>
+                    </a>
+                    <p class="text-muted">Tu escaparate digital dinámico y punto de referencia para el ocio en Vigo.</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-dark mb-3">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="servicios.html" class="footer-link">Servicios y productos</a></li>
+                        <li class="mb-2"><a href="tienda.html" class="footer-link">Tienda</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="footer-link">Sobre nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-dark mb-3">Síguenos</h5>
+                    <div class="d-flex">
+                        <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com" class="social-icon" aria-label="Twitter" target="_blank"><i
+                                class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 pt-4 border-top border-warning">
+                <div class="col-12 text-center text-muted">
+                    <p class="mb-0">&copy; 2026 Plutón Games. Proyecto desarrollado por Neo López Vázquez.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
