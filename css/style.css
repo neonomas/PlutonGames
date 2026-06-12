@@ -500,3 +500,56 @@ footer {
         margin-top: 80px;
     }
 }
+
+/* ==========================================================================
+   Responsive Tables (Promotions & Calendar)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Calendar shrinks to fit exactly without scrolling */
+    .calendar-table {
+        min-width: 100% !important;
+        width: 100% !important;
+        font-size: 0.75rem;
+        table-layout: auto !important; /* Overrides inline fixed layout */
+    }
+    .calendar-table th, .calendar-table td {
+        padding: 4px 2px !important;
+    }
+    .calendar-table td .fw-bold {
+        font-size: 0.85rem !important;
+        margin-bottom: 2px !important;
+    }
+    .calendar-table td .badge {
+        font-size: 0.65rem !important;
+        padding: 3px 4px !important;
+        white-space: normal;
+        display: block; /* Stacks badges vertically inside the small cell */
+    }
+
+    /* Promotions Table (Stacks vertically like cards) */
+    .table-custom, .table-custom tbody, .table-custom tr, .table-custom td {
+        display: block;
+        width: 100%;
+    }
+    .table-custom tr {
+        margin-bottom: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        border-radius: 12px;
+        border: 1px solid #dee2e6;
+        background-color: white;
+    }
+    .table-custom td {
+        border: none !important;
+        border-bottom: 1px solid #eee !important;
+        padding: 15px !important;
+        text-align: left !important;
+    }
+    .table-custom td:last-child {
+        border-bottom: none !important;
+    }
+    .table-custom td.fw-bold {
+        background-color: rgba(245, 158, 11, 0.05);
+        font-size: 1.1rem;
+    }
+}
+
