@@ -20,14 +20,18 @@
             --secondary-color: #ef4444;
             --dark-color: #2d3748;
             --accent-color: #10b981;
+            --text-muted: #718096;
+        }
+
+        body {
+            background-color: #fdfbf7;
         }
 
         .reveal {
             font-family: 'Plus Jakarta Sans', sans-serif;
             color: var(--dark-color);
-            /* Patrón de fondo sutil inspirado en la web */
             background-color: #fdfbf7;
-            background-image: radial-gradient(rgba(245, 158, 11, 0.1) 2px, transparent 2px);
+            background-image: radial-gradient(rgba(245, 158, 11, 0.15) 2px, transparent 2px);
             background-size: 30px 30px;
         }
         
@@ -43,38 +47,41 @@
         }
 
         .reveal .progress span {
-            background-color: var(--primary-color);
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
         }
 
         .reveal .controls {
             color: var(--primary-color);
         }
 
-        /* Estilos personalizados para las diapositivas */
+        /* Glassmorphism Light */
         .glass-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 2px solid rgba(245, 158, 11, 0.2);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
         }
 
         .icon-box {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            background: rgba(245, 158, 11, 0.1);
+            width: 90px;
+            height: 90px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.1));
             color: var(--primary-color);
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
+            border: 2px solid rgba(245, 158, 11, 0.2);
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.1);
         }
 
-        .icon-box.red { background: rgba(239, 68, 68, 0.1); color: var(--secondary-color); }
-        .icon-box.green { background: rgba(16, 185, 129, 0.1); color: var(--accent-color); }
+        .icon-box.green { background: rgba(16, 185, 129, 0.1); color: var(--accent-color); border-color: rgba(16, 185, 129, 0.2);}
+        .icon-box.blue { background: rgba(59, 130, 246, 0.1); color: #3b82f6; border-color: rgba(59, 130, 246, 0.2);}
 
         .feature-list {
             list-style: none;
@@ -84,41 +91,107 @@
         }
 
         .feature-list li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(245, 158, 11, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
         .feature-list i {
             color: var(--primary-color);
-            margin-right: 15px;
-            font-size: 1.5rem;
+            margin-right: 20px;
+            font-size: 1.8rem;
         }
 
         .flex-container {
             display: flex;
             justify-content: space-around;
-            gap: 20px;
+            gap: 30px;
         }
         
         .flex-col {
             flex: 1;
         }
 
-        /* Ajustes específicos */
+        /* Tech Logos */
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 25px;
         }
         
         .tech-item {
             background: white;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 20px;
+            border-top: 3px solid var(--primary-color);
             text-align: left;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+        .tech-item:hover { transform: translateY(-5px); }
+        .tech-icon { font-size: 2.5rem; margin-right: 15px; vertical-align: middle; }
+
+        /* Roadmap Path */
+        .roadmap-path {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin-top: 40px;
+            padding: 0 10px;
+        }
+        .roadmap-path::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            right: 50px;
+            height: 4px;
+            background: rgba(245,158,11,0.2);
+            z-index: 1;
+        }
+        .roadmap-node {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100px;
+        }
+        .node-circle {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(245,158,11,0.15);
+            transition: all 0.3s ease;
+        }
+        .roadmap-node.fragment.visible .node-circle {
+            background: var(--primary-color);
+            color: white;
+        }
+        .node-text {
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark-color);
+        }
+        .node-icon {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--text-muted);
+            display: block;
         }
     </style>
 </head>
@@ -128,191 +201,296 @@
         <div class="slides">
 
             <!-- Diapositiva 1: Portada -->
-            <section>
-                <div class="glass-card">
-                    <img src="assets/pluton_games_icon.png" alt="Plutón Games" style="height: 120px; margin-bottom: 20px; background: none; box-shadow: none;">
-                    <h1>Proyecto: página web para <span>Plutón Games</span></h1>
-                    <p style="font-size: 1.5rem; color: var(--text-muted); margin-top: 30px;">Trabajo de Fin de Grado</p>
-                    <p style="font-size: 1.2rem; font-weight: 600;">Neo López Vázquez</p>
+            <section data-auto-animate>
+                <div class="glass-card" style="padding-top: 60px; padding-bottom: 60px;">
+                    <img src="assets/pluton_games_icon.png" alt="Plutón Games" style="height: 150px; margin-bottom: 30px; background: none; box-shadow: none;">
+                    <h1 style="font-size: 3.5rem;">Proyecto Web: <span>Plutón Games</span></h1>
+                    <p style="font-size: 1.6rem; color: var(--text-muted); margin-top: 30px;">Trabajo de fin de ciclo - Sistemas Microinformáticos y Redes</p>
+                    <hr style="width: 50px; border-color: var(--primary-color); border-width: 3px; opacity: 1; margin: 30px auto;">
+                    <p style="font-size: 1.3rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Neo López Vázquez</p>
                 </div>
+                
+                <!-- SPEAKER NOTES -->
+                <aside class="notes">
+                    ¡Hola! Bienvenidos a mi defensa. Mi nombre es Neo López Vázquez.<br>
+                    Hoy voy a presentar mi Trabajo de Fin de Grado: el diseño y desarrollo desde cero de la plataforma web para Plutón Games.
+                </aside>
             </section>
 
-            <!-- Diapositiva 2: Índice -->
-            <section>
-                <h2>Índice de <span>Contenidos</span></h2>
-                <div class="glass-card" style="padding: 30px;">
-                    <ul class="feature-list" style="font-size: 1.1rem; column-count: 2; column-gap: 40px;">
-                        <li><i class="bi bi-1-circle-fill"></i> Introducción y Objetivos</li>
-                        <li><i class="bi bi-2-circle-fill"></i> La Empresa (Plutón Games)</li>
-                        <li><i class="bi bi-3-circle-fill"></i> Tecnologías Utilizadas</li>
-                        <li><i class="bi bi-4-circle-fill"></i> Metodología y Diseño</li>
-                        <li><i class="bi bi-5-circle-fill"></i> Retos Técnicos y Soluciones</li>
-                        <li><i class="bi bi-6-circle-fill"></i> Internacionalización (IA)</li>
-                        <li><i class="bi bi-7-circle-fill"></i> Escalabilidad Futura</li>
-                        <li><i class="bi bi-8-circle-fill"></i> Conclusiones</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Diapositiva 3: Introducción y Objetivos -->
-            <section>
-                <section>
-                    <h2>Introducción y <span>Objetivos</span></h2>
-                    <p class="fragment" style="font-size: 1.3rem;">Creación de un <strong>escaparate digital dinámico</strong> para atraer al público al local físico.</p>
-                    <div class="flex-container mt-4">
-                        <div class="glass-card flex-col fragment">
-                            <div class="icon-box"><i class="bi bi-megaphone-fill"></i></div>
-                            <h4>Promoción</h4>
-                            <p style="font-size: 1rem;">Visibilidad de productos, eventos y torneos locales.</p>
+            <!-- Diapositiva 2: Índice / Hoja de Ruta Visual -->
+            <section data-auto-animate>
+                <h2 style="margin-bottom: 20px;">Hoja de <span>Ruta</span></h2>
+                <div class="glass-card" style="padding: 40px 20px;">
+                    <div class="roadmap-path">
+                        <div class="roadmap-node fragment">
+                            <div class="node-circle">1</div>
+                            <i class="bi bi-shop node-icon"></i>
+                            <div class="node-text">Empresa</div>
                         </div>
-                        <div class="glass-card flex-col fragment">
-                            <div class="icon-box red"><i class="bi bi-geo-alt-fill"></i></div>
-                            <h4>Conectividad</h4>
-                            <p style="font-size: 1rem;">Facilitar el contacto directo y la localización física.</p>
+                        <div class="roadmap-node fragment">
+                            <div class="node-circle">2</div>
+                            <i class="bi bi-braces node-icon"></i>
+                            <div class="node-text">Tecnologías</div>
+                        </div>
+                        <div class="roadmap-node fragment">
+                            <div class="node-circle">3</div>
+                            <i class="bi bi-window-sidebar node-icon"></i>
+                            <div class="node-text">Retos: UI</div>
+                        </div>
+                        <div class="roadmap-node fragment">
+                            <div class="node-circle">4</div>
+                            <i class="bi bi-table node-icon"></i>
+                            <div class="node-text">Retos: Tablas</div>
+                        </div>
+                        <div class="roadmap-node fragment">
+                            <div class="node-circle">5</div>
+                            <i class="bi bi-translate node-icon"></i>
+                            <div class="node-text">Traducción</div>
+                        </div>
+                        <div class="roadmap-node fragment">
+                            <div class="node-circle">6</div>
+                            <i class="bi bi-rocket-takeoff node-icon"></i>
+                            <div class="node-text">Futuro</div>
+                        </div>
+                        <div class="roadmap-node fragment">
+                            <div class="node-circle">7</div>
+                            <i class="bi bi-play-circle node-icon"></i>
+                            <div class="node-text">Demo</div>
                         </div>
                     </div>
-                </section>
-                <section>
-                    <h2>Objetivos <span>Técnicos</span></h2>
-                    <div class="flex-container mt-4">
-                        <div class="glass-card flex-col">
-                            <div class="icon-box green"><i class="bi bi-laptop"></i></div>
-                            <h4>Accesibilidad</h4>
-                            <p style="font-size: 1rem;">Diseño 100% Responsive e internacionalizado (Inglés/Español).</p>
-                        </div>
-                        <div class="glass-card flex-col">
-                            <div class="icon-box"><i class="bi bi-gem"></i></div>
-                            <h4>Diferenciación</h4>
-                            <p style="font-size: 1rem;">Reforzar la marca visual y destacar el valor humano del equipo.</p>
-                        </div>
-                    </div>
-                </section>
+                </div>
+                <aside class="notes">
+                    Para que sea ameno, este será nuestro caminito de hoy.<br>
+                    1. Primero explicaré la empresa y sus objetivos.<br>
+                    2. Veremos las tecnologías que elegí.<br>
+                    3 y 4. Detallaré los retos técnicos tanto visuales como lógicos.<br>
+                    5. El uso de Inteligencia Artificial para la traducción.<br>
+                    6. Las vías de escalabilidad futuras.<br>
+                    7. Y por último, terminaremos con una demostración final del resultado.
+                </aside>
             </section>
 
-            <!-- Diapositiva 4: La Empresa -->
-            <section>
-                <h2>La Empresa: <span>Plutón Games</span></h2>
-                <div class="glass-card" style="text-align: left;">
-                    <p><strong>Punto de encuentro de referencia</strong> en Vigo para el ocio alternativo.</p>
-                    <ul class="feature-list mt-4">
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Catálogo:</strong> Juegos de mesa, TCG, manga y literatura fantástica.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Ventaja competitiva:</strong> Asesoramiento especializado humano.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> <strong>Comunidad:</strong> Organización de torneos oficiales y zona de juego activa.</li>
+            <!-- Diapositiva 3: La Empresa -->
+            <section data-auto-animate>
+                <h2>1. La Empresa: <span>Plutón Games</span></h2>
+                <div class="flex-container align-items-center mt-4">
+                    <div class="glass-card flex-col fragment" data-fragment-index="1">
+                        <div class="icon-box"><i class="bi bi-shop"></i></div>
+                        <h4>Espacio de Ocio y Comunidad</h4>
+                        <p style="font-size: 1.1rem; color: var(--text-muted);">Un referente en Vigo para amantes de los juegos de mesa, cartas coleccionables y literatura fantástica.</p>
+                    </div>
+                    <div class="glass-card flex-col fragment" data-fragment-index="2">
+                        <div class="icon-box green"><i class="bi bi-people-fill"></i></div>
+                        <h4>Nuestra Filosofía</h4>
+                        <p style="font-size: 1.1rem; color: var(--text-muted);">En lugar de competir en precio con grandes superficies, aportamos valor mediante el asesoramiento especializado y los eventos presenciales.</p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    (Click) Plutón Games es una tienda de ocio alternativo en Vigo. Venden juegos de mesa, cartas de Magic, cómics...<br>
+                    (Click) Pero su verdadero valor no es vender cajas, sino crear COMUNIDAD. Tienen mesas de juego y asesoramiento personalizado, compitiendo mediante cercanía y no por precio.
+                </aside>
+            </section>
+            
+            <section data-auto-animate>
+                <h2>1. La Empresa: <span>Objetivos Web</span></h2>
+                <div class="glass-card mt-4">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 30px;">Crear un <strong>Escaparate Digital Dinámico</strong></h3>
+                    <ul class="feature-list">
+                        <li class="fragment"><i class="bi bi-search"></i> <strong>Visibilidad:</strong> Mostrar que en la tienda ocurren eventos increíbles.</li>
+                        <li class="fragment"><i class="bi bi-phone"></i> <strong>Accesibilidad:</strong> 100% orientada a móviles y bilingüe.</li>
+                        <li class="fragment"><i class="bi bi-envelope-paper-heart"></i> <strong>Conexión:</strong> Facilitar la localización y el contacto directo con la tienda.</li>
                     </ul>
                 </div>
+                <aside class="notes">
+                    Por tanto, el objetivo de la web no era hacer un comercio online para competir con gigantes.<br>
+                    (Click) El objetivo es tener un "Escaparate" para enseñar los eventos.<br>
+                    (Click) Una web totalmente enfocada a móviles y bilingüe para captar turismo.<br>
+                    (Click) Y un nexo para atraer clientes de lo digital al local físico.
+                </aside>
             </section>
 
-            <!-- Diapositiva 5: Tecnologías -->
-            <section>
-                <h2>Tecnologías <span>Utilizadas</span></h2>
+            <!-- Diapositiva 4: Tecnologías -->
+            <section data-auto-animate>
+                <h2>2. Tecnologías <span>Utilizadas</span></h2>
                 <div class="tech-grid" style="font-size: 1.1rem;">
                     <div class="tech-item fragment">
-                        <h4 style="margin:0;"><i class="bi bi-filetype-html text-primary me-2"></i> HTML5</h4>
-                        <p style="font-size:0.9rem; margin-top:5px; margin-bottom:0;">Etiquetado semántico puro para mejorar SEO y accesibilidad estructural.</p>
+                        <h4 style="margin:0;"><i class="bi bi-filetype-html text-primary tech-icon"></i> HTML5</h4>
+                        <p style="font-size:1rem; color:var(--text-muted); margin-top:10px;">La base de la web, proporcionando una estructura clara y accesible para todos los dispositivos.</p>
                     </div>
                     <div class="tech-item fragment">
-                        <h4 style="margin:0;"><i class="bi bi-filetype-css text-danger me-2"></i> CSS3 Moderno</h4>
-                        <p style="font-size:0.9rem; margin-top:5px; margin-bottom:0;">Variables nativas, flexbox, y efectos avanzados de Glassmorphism.</p>
+                        <h4 style="margin:0;"><i class="bi bi-filetype-css text-danger tech-icon"></i> CSS3</h4>
+                        <p style="font-size:1rem; color:var(--text-muted); margin-top:10px;">Encargado del diseño visual, los colores, y las animaciones que hacen atractiva la página.</p>
                     </div>
                     <div class="tech-item fragment">
-                        <h4 style="margin:0;"><i class="bi bi-bootstrap-fill text-primary me-2"></i> Bootstrap v5.3</h4>
-                        <p style="font-size:0.9rem; margin-top:5px; margin-bottom:0;">Sistema de Grid responsive y componentes modulares UI.</p>
+                        <h4 style="margin:0;"><i class="bi bi-bootstrap-fill text-primary tech-icon"></i> Bootstrap</h4>
+                        <p style="font-size:1rem; color:var(--text-muted); margin-top:10px;">Herramienta clave para conseguir que la página se adapte automáticamente a las pantallas de los móviles.</p>
                     </div>
                     <div class="tech-item fragment">
-                        <h4 style="margin:0;"><i class="bi bi-filetype-js text-warning me-2"></i> JavaScript</h4>
-                        <p style="font-size:0.9rem; margin-top:5px; margin-bottom:0;">Lógica de cliente nativa: Intersection Observer y validaciones.</p>
+                        <h4 style="margin:0;"><i class="bi bi-filetype-js text-warning tech-icon"></i> JavaScript</h4>
+                        <p style="font-size:1rem; color:var(--text-muted); margin-top:10px;">El "cerebro" que añade dinamismo, como mostrar elementos al hacer scroll o validar el formulario.</p>
                     </div>
                 </div>
+                <aside class="notes">
+                    Para el desarrollo, he apostado por tecnologías del lado del cliente puro.<br>
+                    (Click) HTML5 para un buen etiquetado.<br>
+                    (Click) CSS3 muy avanzado, usando técnicas de diseño moderno como el Glassmorphism o cristales esmerilados.<br>
+                    (Click) Bootstrap 5 como corazón del sistema de rejilla móvil.<br>
+                    (Click) Y JavaScript nativo, sin jQuery, para que la web cargue como un rayo.
+                </aside>
             </section>
 
-            <!-- Diapositiva 6: Estructura -->
+            <!-- Diapositiva 5: Retos Técnicos 1 -->
             <section>
-                <h2>Proceso de <span>Desarrollo</span></h2>
-                <div class="glass-card">
-                    <ol style="text-align: left; font-size: 1.2rem; line-height: 1.8;">
-                        <li class="fragment"><strong>Planificación:</strong> Esqueleto HTML y enrutado base.</li>
-                        <li class="fragment"><strong>Maquetación:</strong> Grid de Bootstrap y diseño por bloques (Cards).</li>
-                        <li class="fragment"><strong>Personalización:</strong> Creación de `style.css` inyectando la identidad visual corporativa.</li>
-                        <li class="fragment"><strong>Interactividad:</strong> Implementación de Javascript para animaciones.</li>
-                        <li class="fragment"><strong>Internacionalización:</strong> Duplicación y traducción total al inglés.</li>
-                    </ol>
-                </div>
-            </section>
-
-            <!-- Diapositiva 7: Problemas y Soluciones -->
-            <section>
-                <section>
-                    <h2>Retos Técnicos: <span>Soluciones</span></h2>
-                    <div class="glass-card text-left" style="text-align: left;">
-                        <h4>1. Superposición del menú fijo</h4>
-                        <p style="font-size: 1.1rem; color: var(--text-muted);"><em>Problema:</em> El menú `fixed-top` ocultaba el contenido principal.<br>
-                        <em>Solución:</em> Implementación de clases de relleno dinámico para compensar la altura del menú.</p>
-                    </div>
-                    <div class="glass-card text-left mt-3" style="text-align: left;">
-                        <h4>2. Animaciones de rendimiento</h4>
-                        <p style="font-size: 1.1rem; color: var(--text-muted);"><em>Problema:</em> Animar el scroll con métodos antiguos bloqueaba la interfaz.<br>
-                        <em>Solución:</em> Uso de la <strong>API Intersection Observer</strong> nativa de JavaScript, añadiendo clases CSS de forma optimizada.</p>
-                    </div>
-                </section>
-                <section>
-                    <h2>Retos Técnicos: <span>Soluciones</span></h2>
-                    <div class="glass-card text-left" style="text-align: left;">
-                        <h4>3. Formulario sin Backend</h4>
-                        <p style="font-size: 1.1rem; color: var(--text-muted);"><em>Problema:</em> Imposibilidad de envío de emails al ser web estática.<br>
-                        <em>Solución:</em> Script JS propio que intercepta el envío, valida usando HTML5 y simula el éxito limpiando los campos visualmente.</p>
-                    </div>
-                    <div class="glass-card text-left mt-3" style="text-align: left;">
-                        <h4>4. Legibilidad sobre patrones</h4>
-                        <p style="font-size: 1.1rem; color: var(--text-muted);"><em>Problema:</em> El fondo dinámico dificultaba leer el texto.<br>
-                        <em>Solución:</em> Arquitectura visual basada en componentes tipo "tarjeta" limpias (Glassmorphism y fondos sólidos).</p>
-                    </div>
-                </section>
-            </section>
-
-            <!-- Diapositiva 8: Internacionalización -->
-            <section>
-                <h2>Traducción con <span>Inteligencia Artificial</span></h2>
-                <div class="flex-container">
-                    <div class="glass-card flex-col">
-                        <h4>Herramienta</h4>
-                        <p style="font-size: 1.1rem;">Se utilizó <strong>Google Gemini</strong> como motor de traducción mediante <em>Prompt Engineering</em>.</p>
+                <h2>3. Retos: <span>Interfaz de Usuario</span></h2>
+                <div class="flex-container align-items-stretch mt-4">
+                    <div class="glass-card flex-col fragment">
+                        <h4>Diseño 100% Responsivo</h4>
                         <hr>
-                        <h4>Reto</h4>
-                        <p style="font-size: 1.1rem;">El vocabulario "Geek". Traducir "Juegos de cartas coleccionables" requería contexto del sector.</p>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); text-align: left;"><i class="bi bi-phone text-primary me-2"></i> <strong>El Reto:</strong> Adaptar una web con múltiples columnas y elementos gráficos para que se viera perfecta en un teléfono móvil.<br><br>
+                        <i class="bi bi-check2-circle text-success me-2"></i> <strong>La Solución:</strong> Reorganización automática de contenidos en bloques apilados mediante CSS y Bootstrap.</p>
                     </div>
-                    <div class="glass-card flex-col">
-                        <h4>La Solución</h4>
-                        <ul class="feature-list" style="font-size: 1rem;">
-                            <li><i class="bi bi-cpu"></i> IA contextualizada al sector.</li>
-                            <li><i class="bi bi-code-slash"></i> Respeto estricto del árbol DOM y clases CSS originales.</li>
-                            <li><i class="bi bi-aspect-ratio"></i> Flexbox resolvió los desajustes de longitud de palabras.</li>
-                        </ul>
+                    <div class="glass-card flex-col fragment">
+                        <h4>Navegación Amigable</h4>
+                        <hr>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); text-align: left;"><i class="bi bi-cursor text-primary me-2"></i> <strong>El Reto:</strong> Lograr una experiencia de usuario (UX) fluida donde los menús y la información siempre estén a mano sin molestar.<br><br>
+                        <i class="bi bi-check2-circle text-success me-2"></i> <strong>La Solución:</strong> Menú superior fijo que compensa su altura automáticamente para no tapar los títulos.</p>
                     </div>
                 </div>
+                <aside class="notes">
+                    Llegar a ese resultado final tuvo sus retos técnicos.<br>
+                    (Click) Al fijar el menú, tapaba la página. Lo solucioné con paddings dinámicos.<br>
+                    (Click) Pero el mayor orgullo es el rendimiento. En vez de usar librerías pesadas, usé la API IntersectionObserver para que los elementos detecten cuando entran en pantalla.
+                </aside>
             </section>
 
-            <!-- Diapositiva 9: Futuro -->
+            <!-- Diapositiva 6: Formulario y Tablas -->
             <section>
-                <h2>Escalabilidad y <span>Futuro</span></h2>
-                <div class="glass-card" style="text-align: left;">
-                    <p style="font-size: 1.2rem;">Vías de crecimiento sobre el Frontend estático desarrollado:</p>
-                    <ul class="feature-list">
-                        <li class="fragment"><i class="bi bi-database-fill"></i> <strong>Desarrollo Backend:</strong> Conectar la web a una base de datos (Node.js, MySQL) para gestión dinámica del catálogo.</li>
-                        <li class="fragment"><i class="bi bi-cart-fill"></i> <strong>E-commerce:</strong> Añadir pasarela de pago para romper la barrera del comercio puramente local.</li>
-                        <li class="fragment"><i class="bi bi-people-fill"></i> <strong>Gestión de Torneos:</strong> Panel de registro de usuarios y automatización de cuadros de liga.</li>
-                    </ul>
+                <h2>4. Retos Técnicos: <span>Tablas y Lógica</span></h2>
+                <div class="flex-container align-items-stretch mt-4">
+                    <div class="glass-card flex-col fragment">
+                        <h4>Tablas Responsivas</h4>
+                        <hr>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); text-align: left;"><i class="bi bi-bug text-danger me-2"></i> <strong>Problema:</strong> Un calendario de 7 columnas explota en móviles.<br><br>
+                        <i class="bi bi-wrench text-success me-2"></i> <strong>Solución:</strong> Modificación nativa de CSS para encoger fuentes y apilar celdas formando "tarjetas" verticales.</p>
+                    </div>
+                    <div class="glass-card flex-col fragment">
+                        <h4>Formulario sin Backend</h4>
+                        <hr>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); text-align: left;"><i class="bi bi-bug text-danger me-2"></i> <strong>Problema:</strong> Sin servidor, no había correos reales.<br><br>
+                        <i class="bi bi-wrench text-success me-2"></i> <strong>Solución:</strong> Script en JS que intercepta el envío, comprueba campos y simula el éxito limpiando todo.</p>
+                    </div>
                 </div>
+                <aside class="notes">
+                    Otros dos grandes retos:<br>
+                    (Click) El diseño adaptativo de tablas gigantes. En móviles, mediante CSS puro, forzamos que las tablas se conviertan en bloques apilados o reduzcan su tamaño.<br>
+                    (Click) Y por último, el formulario, que carece de servidor, está validado 100% por cliente con JavaScript interceptando el envío.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 7: Internacionalización (IA) -->
+            <section data-transition="slide-in fade-out">
+                <div class="icon-box blue" style="width: 80px; height: 80px; font-size: 2.5rem;"><i class="bi bi-translate"></i></div>
+                <h2>5. Traducción e <span>Inteligencia Artificial</span></h2>
+                <div class="glass-card mt-3">
+                    <p style="font-size: 1.3rem;">La página web cuenta con una versión completa en inglés para captar público internacional. Para ello, nos apoyamos en la I.A.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="mt-4 text-start">
+                        <div class="tech-item fragment">
+                            <h4 style="margin:0;">Precisión en el Código</h4>
+                            <p style="font-size: 1rem; color: var(--text-muted); margin-top: 10px; margin-bottom: 0;">La IA permite traducir los textos integrados en el código sin romper accidentalmente las etiquetas HTML o los estilos.</p>
+                        </div>
+                        <div class="tech-item fragment">
+                            <h4 style="margin:0;">Terminología "Geek"</h4>
+                            <p style="font-size: 1rem; color: var(--text-muted); margin-top: 10px; margin-bottom: 0;">Los traductores tradicionales fallan con juegos de rol y cartas. La IA comprendió el contexto para usar términos exactos de la afición.</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Además, exigimos que la web estuviese en dos idiomas.<br>
+                    (Click) En lugar de Google Translate, utilicé IA generativa para procesar los archivos HTML completos.<br>
+                    (Click) Usé técnicas de "Prompting" para que la IA actuase como un friki y tradujese términos complejos con naturalidad.<br>
+                    (Click) Y como el diseño usa Flexbox, los diferentes largos de los textos se acomodaron solos en las cajas, sin romperse.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 8 (Demo Inglés): Translation and AI -->
+            <section data-transition="fade-in slide-out">
+                <div class="icon-box blue" style="width: 80px; height: 80px; font-size: 2.5rem;"><i class="bi bi-translate"></i></div>
+                <h2>5. Translation and <span>Artificial Intelligence</span></h2>
+                <div class="glass-card mt-3">
+                    <p style="font-size: 1.3rem;">The website features a complete English version to attract international audiences. To achieve this, we rely on A.I.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="mt-4 text-start">
+                        <div class="tech-item">
+                            <h4 style="margin:0;">Code Precision</h4>
+                            <p style="font-size: 1rem; color: var(--text-muted); margin-top: 10px; margin-bottom: 0;">AI allows translating embedded text within the code without accidentally breaking HTML tags or styles.</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4 style="margin:0;">"Geek" Terminology</h4>
+                            <p style="font-size: 1rem; color: var(--text-muted); margin-top: 10px; margin-bottom: 0;">Traditional translators fail with role-playing and card games. The AI understood the context to use the exact hobby terms.</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Y aquí podéis ver el resultado de esa traducción en directo.<br>
+                    Como veis, el diseño de Flexbox y CSS se adapta perfectamente a la longitud del texto en inglés sin romperse, demostrando la solidez del Front-end.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 9: Escalabilidad y Futuro -->
+            <section>
+                <h2>6. Futuro y <span>Escalabilidad</span></h2>
+                <div class="glass-card" style="text-align: center;">
+                    <p style="font-size: 1.2rem; color:var(--text-muted);">La plataforma actual es un excelente punto de partida. Los siguientes pasos para seguir creciendo son:</p>
+                    <div class="d-flex flex-column align-items-center mt-4 gap-4">
+                        <div class="tech-item fragment w-75">
+                            <h4><i class="bi bi-database-fill text-primary"></i> Backend y Base de Datos</h4>
+                            <p style="font-size: 1rem; color:var(--text-muted); margin-bottom: 0;">Integrar un panel de control para que la tienda pueda añadir o modificar productos fácilmente sin tocar el código fuente.</p>
+                        </div>
+                        <div class="d-flex justify-content-center gap-4 w-100">
+                            <div class="tech-item fragment w-50">
+                                <h4><i class="bi bi-cart-fill text-primary"></i> E-commerce</h4>
+                                <p style="font-size: 1rem; color:var(--text-muted); margin-bottom: 0;">Añadir carrito de compras y pagos seguros online.</p>
+                            </div>
+                            <div class="tech-item fragment w-50">
+                                <h4><i class="bi bi-calendar-check-fill text-primary"></i> App de Jugadores</h4>
+                                <p style="font-size: 1rem; color:var(--text-muted); margin-bottom: 0;">Área privada para registrarse en torneos y ver puntuaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    (Click) Una vez que tenemos la interfaz, el siguiente paso claro es conectar bases de datos con un lenguaje de Backend para gestionar inventario.<br>
+                    (Click) Poder vender online.<br>
+                    (Click) E implementar una intranet donde los jugadores guarden sus puntos de torneo.
+                </aside>
+            </section>
+
+            <!-- Diapositiva 9: Demostración -->
+            <section data-auto-animate>
+                <h2>7. El <span>Escaparate</span></h2>
+                <p style="font-size: 1.5rem;">Veamos el resultado final en directo...</p>
+                <div style="margin-top: 40px;">
+                    <a href="index.html" target="_blank" style="display: inline-block; transition: transform 0.3s ease;">
+                        <img src="assets/pluton_games_icon.png" alt="Plutón Games" style="height: 200px; background: none; box-shadow: none; filter: drop-shadow(0 10px 20px rgba(245,158,11,0.3)); border: none;">
+                    </a>
+                </div>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-top: 20px;"><i class="bi bi-mouse me-2"></i>Haz clic en el logo para abrir la página web</p>
+                <aside class="notes">
+                    Para terminar, os quiero enseñar el resultado final de este escaparate digital.<br>
+                    (HAZ CLIC EN EL LOGO PARA ABRIR LA WEB EN OTRA PESTAÑA Y NAVEGAR UN POCO POR ELLA).
+                </aside>
             </section>
 
             <!-- Diapositiva 10: Conclusión -->
             <section>
-                <h2>Conclusiones</h2>
-                <div class="glass-card">
-                    <div class="icon-box green" style="width: 100px; height: 100px; font-size: 3rem;"><i class="bi bi-award-fill"></i></div>
-                    <p style="font-size: 1.3rem;">Desarrollo técnico culminado con éxito. Se ha entregado un producto <strong>profesional, 100% responsivo y adaptado</strong> a las necesidades de la pequeña empresa local.</p>
-                    <h3 style="margin-top: 40px;">¡Gracias por su atención!</h3>
-                    <p style="color: var(--primary-color);">¿Alguna pregunta?</p>
+                <div class="glass-card" style="padding-top: 80px; padding-bottom: 80px;">
+                    <h3 style="font-size: 3.5rem;">¡Gracias por su atención!</h3>
+                    <hr style="border-color: rgba(245,158,11,0.2); margin: 30px 0; border-width: 2px;">
+                    <p style="color: var(--primary-color); font-size: 1.5rem; margin-top: 30px;">Quedo a su entera disposición para cualquier pregunta o aclaración.</p>
                 </div>
+                <aside class="notes">
+                    Y con esto concluyo mi presentación. 
+                    Muchas gracias por vuestra atención, y si tienen cualquier pregunta, estaré encantado de responder.
+                </aside>
             </section>
 
         </div>
@@ -320,13 +498,18 @@
 
     <!-- Reveal.js Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.min.js"></script>
+    
     <script>
         Reveal.initialize({
             hash: true,
             controls: true,
             progress: true,
             center: true,
-            transition: 'slide' // none/fade/slide/convex/concave/zoom
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            plugins: [ RevealNotes ],
+            // Ocultar número de diapositiva o no
+            slideNumber: true
         });
     </script>
 </body>
