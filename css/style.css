@@ -1,0 +1,502 @@
+/* ==========================================================================
+   Plutón Games - Estilos Personalizados (Tema Alegre / Cálido)
+   ========================================================================== */
+
+:root {
+    /* Paleta de Colores Alegre */
+    --primary-color: #f59e0b; /* Amber/Amarillo cálido */
+    --primary-hover: #d97706; /* Naranja más oscuro para hover */
+    --secondary-color: #ef4444; /* Rojo juguetón / acento */
+    --dark-bg: #fdfbf7; /* Crema muy claro, sustituye al fondo oscuro */
+    --light-bg: #ffffff; /* Blanco puro para tarjetas */
+    --text-color: #2d3748; /* Gris oscuro para legibilidad perfecta */
+    --text-muted: #718096; /* Gris medio para textos secundarios */
+    --accent-color: #10b981; /* Verde brillante para toques de éxito/precio */
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    /* Patrón de puntos juguetón sutil */
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 20px 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Navegación (Navbar)
+   ========================================================================== */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-color) !important;
+}
+
+.navbar-brand i {
+    color: var(--primary-color);
+}
+
+.navbar-brand span {
+    color: var(--secondary-color);
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--text-color) !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+/* Language Switcher */
+.lang-switch {
+    font-weight: 600;
+}
+.lang-switch a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.lang-switch a:hover {
+    color: var(--secondary-color);
+}
+.lang-switch a.active {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+    padding: 160px 0 100px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a playful animated blob in the background */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.hero-title span {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Floating Image Animation */
+.floating-img {
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    border-radius: 20px;
+}
+
+/* ==========================================================================
+   Botones (Buttons)
+   ========================================================================== */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 50px; /* Bordes muy redondeados */
+    border: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote */
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.btn-custom:hover {
+    background-color: var(--primary-hover);
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+/* ==========================================================================
+   Tarjetas (Cards) y Elementos de Interfaz
+   ========================================================================== */
+.card-custom {
+    background-color: var(--light-bg);
+    border: 2px solid #e2e8f0;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.card-custom:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.15), 0 8px 10px -6px rgba(245, 158, 11, 0.1);
+}
+
+/* Image Hover Zoom */
+.card-img-wrapper {
+    overflow: hidden;
+}
+.card-img-custom {
+    transition: transform 0.5s ease;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.card-custom:hover .card-img-custom {
+    transform: scale(1.1);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(239,68,68,0.1));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border: 2px solid rgba(245,158,11,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover .icon-wrapper {
+    transform: rotate(10deg);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+.glass-panel-dark {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* ==========================================================================
+   Tablas y Formularios
+   ========================================================================== */
+.table-custom {
+    color: var(--text-color);
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table-custom thead th {
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.table-custom tbody tr {
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease;
+}
+
+.table-custom tbody tr:hover {
+    transform: translateY(-2px);
+}
+
+.table-custom tbody td {
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.2rem;
+}
+
+.table-custom tbody td:first-child {
+    border-left: 1px solid #e2e8f0;
+    border-radius: 12px 0 0 12px;
+}
+
+.table-custom tbody td:last-child {
+    border-right: 1px solid #e2e8f0;
+    border-radius: 0 12px 12px 0;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    background-color: rgba(16, 185, 129, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Formularios */
+.form-control-custom {
+    background-color: var(--light-bg);
+    border: 2px solid #cbd5e1;
+    color: var(--text-color);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.form-control-custom:focus {
+    background-color: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
+    color: var(--text-color);
+}
+
+/* ==========================================================================
+   Organigrama (Org Chart)
+   ========================================================================== */
+.org-chart-box {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.org-chart-box .bg-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.org-chart-box .bg-dark {
+    background-color: var(--light-bg) !important;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    background-color: #ffffff;
+    border-top: 4px solid var(--primary-color);
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-bg);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--text-color);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+    border-color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   Scroll Animations (Intersection Observer Targets)
+   ========================================================================== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Tipografía y Utilitarios Adicionales */
+.page-header {
+    padding: 120px 0 60px;
+    background-color: var(--dark-bg);
+    text-align: center;
+    border-bottom: 1px dashed #cbd5e1;
+}
+
+.section-title {
+    font-weight: 800;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* ==========================================================================
+   Categorías de Servicios Alternadas
+   ========================================================================== */
+.category-row {
+    background-color: var(--light-bg);
+    border: 2px solid #e2e8f0;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.category-row:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.category-img-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    position: relative;
+}
+
+.category-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Efectos de difuminado (mask) para fusionar con el fondo */
+/* Si la imagen está a la derecha, difuminamos la izquierda */
+.img-fade-left {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);
+    mask-image: linear-gradient(to right, transparent 0%, black 25%);
+}
+
+/* Si la imagen está a la izquierda, difuminamos la derecha */
+.img-fade-right {
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 25%);
+    mask-image: linear-gradient(to left, transparent 0%, black 25%);
+}
+
+/* En pantallas pequeñas, deshabilitamos el degradado lateral porque se apilan verticalmente */
+@media (max-width: 767.98px) {
+    .img-fade-left, .img-fade-right {
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 15%);
+    }
+    .category-img-wrapper {
+        min-height: 250px;
+    }
+}
+
+/* Calendario interactivo */
+.calendar-cell {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.calendar-cell:hover {
+    background-color: var(--light-color) !important;
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+    position: relative;
+}
+
+/* Org chart row spacing */
+.org-row-lines {
+    margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+    .org-row-lines {
+        margin-top: 80px;
+    }
+}
